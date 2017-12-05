@@ -1,7 +1,7 @@
 // String, number, and logic drills
 
-// #1 Jedi name
-/* Write a function called jediName which takes two arguments:
+/* #1 Jedi name
+Write a function called jediName which takes two arguments:
 
 firstName - a person's first name
 lastName - a person's last name
@@ -21,8 +21,7 @@ function jediName(firstName, lastName){
 
 jediName("Kevin", "Peery");
 
-// #2 To infinity...
-/*
+/* #2 To infinity...
 
 Write a function called beyond which takes a single argument, num and logs a different message depending on its value.
 
@@ -50,8 +49,7 @@ function beyond(num){
 }
 beyond(10);
 
-//#3
-/*Cracking the code
+/* #3 Cracking the code
 
 A code has been invented which replaces each character in a sentence with a five letter word. The first letter of each encoded word determines which of the remaining four characters contains the decoded character according to this table:
 
@@ -60,13 +58,12 @@ a	2
 b	3
 c	4
 d	5
+
 So for example, the encoded word 'cycle' would be decoded to the character 'l'. This is because the first letter is a 'c', so you look for the fourth character, which is 'l'.
-
 If the first letter of the encoded word isn't 'a', 'b', 'c', or 'd' (for example 'mouse') this should be decoded to a space.
-
 Write a function called decode which takes an encoded word as an argument, and returns the correct decoded character.
-
 Use your function to decode the following message: 'craft block argon meter bells brown croon droop'.
+
 */
 
 function decode(word){
@@ -92,7 +89,8 @@ function decode(word){
   }
   decode("Chicken");
 
-/*
+/* FUTURE solution! for #3.
+
 function decode(word){
   console.log("Incoming word", word);
   word = word.toLowerCase();
@@ -121,8 +119,11 @@ function decode(word){
 decode("Chicken Soup");
 */
 
-/* Write a function that takes the name of a month as an argument and use a switch statement to determine how many days are there in that month. For example if the parameter to the function is January, the function should display "January has 31 days".
-
+/* #4 How many days in a month
+Write a function that takes the name of a month as an argument and 
+use a switch statement to determine how many days are there in that month. 
+For example if the parameter to the function is January, the function should 
+display "January has 31 days".
 */
 
 function daysInMonth(month) {
@@ -185,6 +186,30 @@ function daysInMonth(month) {
 }
 
 daysInMonth("January");
+
+/* #5 Rock Paper Scissors
+
+In the game Rock Paper Scissors, two players simultaneously choose one of the three options: rock, paper, 
+or scissors. If both player choose the same option, the result is a tie. Otherwise the winner is 
+determined as follows:
+
+Rock beats scissors - a rock can break a pair of scissors
+Scissors beats paper, because scissors can cut paper
+Paper beats rock, because a piece of paper can cover a rock
+
+Create a game in which you are playing agaist the computer. The computer randomly chooses rock, 
+paper, or scissors. Your function should take as an argument, 1, 2, or 3 to represent rock, paper, 
+or scissors and determine the winner. The code for the computer to generate a random number between
+1 and 3 is -
+
+function RockPaperScissors(userChoice){
+    var computer = 1 + Math.floor((Math.random()*3));
+  
+}
+
+RockPaperScissors(2);
+
+*/
 
 function RockPaperScissors(userChoice){
   var computer = 1 + Math.floor((Math.random()*3));
